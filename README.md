@@ -31,7 +31,34 @@ cd getlead
 npm run dev
 ```
 
+## Project Structure
 
+The project follows a standard Next.js structure with additional configurations for Tailwind CSS and Redux Toolkit.
+
+```plaintext
+.
+├── src/
+│     ├── app
+            ├── home/                 
+            │    ├── page.jsx                       # Home page ('/home' : router)
+            ├── Redux                               # Redux Toolkit store setup
+            │    ├── store.jsx      
+            │    ├── provide.jsx                    # React components to warp store
+            │    ├── features/
+            │       ├── AuthSlice                   # Redux reducers
+            │       ├── BannerSlice                 # Redux reducers
+            ├── page.jsx                            # Root router ( '/': login router)
+      ├── Components/                               # Components
+             ├── Home                               # Home Component
+             ├── Login                              # Login Component
+             └── ...
+      ├── domain
+             ├── axiosInstance.js            # Set Base Url
+
+├── .gitignore          # Git ignore file
+├── package.json        # NPM package configuration
+└── README.md           # Project documentation
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
