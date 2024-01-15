@@ -53,11 +53,12 @@ The project follows a standard Next.js structure with additional configurations 
              ├── Login                              # Login Component
              └── ...
       ├── domain
-             ├── axiosInstance.js            # Set Base Url
+             ├── axiosInstance.js                    # Set Base Url
 
-├── .gitignore          # Git ignore file
-├── package.json        # NPM package configuration
-└── README.md           # Project documentation
+├── .gitignore                                     # Git ignore file
+├── tailwind.config.js                             # tailwind config file
+├── package.json                                   # NPM package configuration
+└── README.md                                      # Project documentation
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
