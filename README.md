@@ -1,7 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Next.js with Tailwind CSS and Redux Toolkit
-A template for building Next.js applications with Tailwind CSS for styling and Redux Toolkit for state management.
+This project is built with [Next.js](https://nextjs.org/), utilizing [Tailwind CSS](https://tailwindcss.com/) for styling and [Redux Toolkit](https://redux-toolkit.js.org/) for state management. 
 
 ## Getting Started
 
