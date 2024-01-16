@@ -83,7 +83,7 @@ function Home() {
 
         <div className="md:pt-6 m-auto overflow-x-auto p-3 lg:w-[90%]">
           {loading ? (
-            <LinearProgress />
+            <LinearProgress style={{ color: "#EF233C" }} />
           ) : (
             <DataGrid
               rows={rows}

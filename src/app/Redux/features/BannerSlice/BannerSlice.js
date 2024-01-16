@@ -3,14 +3,8 @@ import axiosInstance from "../../../../domain/axiosInstance";
 
 //<<<------------------------Banner Api Call---------------------->>>>>
 export const BannerApi = createAsyncThunk("banner/BannerApi", async () => {
-  const token = localStorage.getItem("token");
-
   try {
-    const res = await axiosInstance.get("/api_bcc/api/admin_panel/banners", {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const res = await axiosInstance.get("/api_bcc/api/admin_panel/banners");
     return res.data.data.results;
   } catch (error) {
     console.error("Error fetching banners:", error);
