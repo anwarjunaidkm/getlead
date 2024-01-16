@@ -1,17 +1,64 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Next.js with Tailwind CSS and Redux Toolkit
+This project is built with [Next.js](https://nextjs.org/), utilizing [Tailwind CSS](https://tailwindcss.com/) for styling and [Redux Toolkit](https://redux-toolkit.js.org/) for state management. 
+
 ## Getting Started
 
-First, run the development server:
+## Installation
+
+1. Clone the repository:
+```bash
+   git clone https://github.com/anwarjunaidkm/getlead.git
+```
+2.Navigate to the project directory:
+
+```bash
+cd getlead
+```
+
+3.Install dependencies:
+
+```bash
+ npm i
+ ```
+
+
+
+4. run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+
+## Project Structure
+
+The project follows a standard Next.js structure with additional configurations for Tailwind CSS and Redux Toolkit.
+
+```plaintext
+.
+├── src/
+│     ├── app
+            ├── home/                 
+            │    ├── page.jsx                       # Home page ('/home' : router)
+            ├── Redux                               # Redux Toolkit store setup
+            │    ├── store.jsx      
+            │    ├── provide.jsx                    # React components to warp store
+            │    ├── features/
+            │       ├── AuthSlice                   # Redux reducers
+            │       ├── BannerSlice                 # Redux reducers
+            ├── page.jsx                            # Root router ( '/': login router)
+      ├── Components/                               # Components
+             ├── Home                               # Home Component
+             ├── Login                              # Login Component
+             └── ...
+      ├── domain
+             ├── axiosInstance.js                    # Set Base Url
+
+├── .gitignore                                     # Git ignore file
+├── tailwind.config.js                             # tailwind config file
+├── package.json                                   # NPM package configuration
+└── README.md                                      # Project documentation
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
