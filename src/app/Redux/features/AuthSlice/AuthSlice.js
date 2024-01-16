@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axiosInstance from "../../../../domain/axiosInstance";
-import { toast } from "react-toastify";
 
 //<<<--------------------Login Api------------------------>>>
 export const LoginApi = createAsyncThunk(
@@ -13,30 +12,12 @@ export const LoginApi = createAsyncThunk(
       );
       if (res.data.data.token) {
         localStorage.setItem("token", res.data.data.token.access);
-
-        toast.success("Login successful!", {
-          position: "top-right",
-          autoClose: 1000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          onClose: () => {
-            router.push("/home");
-          },
-        });
+        router.push("/home");
       }
     } catch (error) {
       console.error("Login failed:", error.response.data.message);
 
-      toast.error(error.response.data.message, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
+      alert(error.response.data.message, "..!!");
     }
   }
 );

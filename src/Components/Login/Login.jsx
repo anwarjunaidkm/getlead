@@ -4,7 +4,6 @@ import { CircularProgress, Container, TextField } from "@mui/material";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer } from "react-toastify";
 
 function Login() {
   const dispatch = useDispatch();
@@ -31,7 +30,6 @@ function Login() {
   return (
     <Container>
       <div className="h-[80vh] flex items-center justify-center">
-        <ToastContainer />
         <div className="flex flex-col items-center p-1 md:p-10 md:border border-solid gap-4 justify-center">
           <h1 className="text-3xl text-[#3A3D4B] font-bold my-7">Login</h1>
           {loading ? ( // Conditionally render loading spinner
